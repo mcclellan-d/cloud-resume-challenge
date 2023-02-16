@@ -12,8 +12,9 @@ Rather than what the guide recommends for HTML, CSS, and Javascript... We should
 It will look prettier and will be easier to define.
 
 
-CloudFront
+# CloudFront
 Since we'll likely use cloudfront... we probably don't need to give direct access to our bucket.
 Check cantrill course covering the section... 90% certain there's a lab associated
 
+- Update: Yes, we can use ACM and CloudFront without route53
 
