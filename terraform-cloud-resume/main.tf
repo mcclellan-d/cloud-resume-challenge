@@ -17,14 +17,6 @@ module "cloudflare" {
   common_tags = var.common_tags
 }
 
-
-# integration with cloudfront is enough to warrant combining these
-# module "s3" {
-#   source = "./modules/s3"
-#   # cloudfront = module.cloudfront.thing.stuff.arn
-#   bucket_name = var.bucket_name
-# }
-
 module "cloudfront" {
   source = "./modules/cloudfront"
   bucket_name = var.bucket_name
@@ -33,3 +25,9 @@ module "cloudfront" {
   common_tags = var.common_tags
   tlscert_arn = module.acm.tlscert_arn
 }
+
+# module "s3" {
+#   source = "./modules/s3"
+#   # cloudfront = module.cloudfront.thing.stuff.arn
+#   bucket_name = var.bucket_name
+# }
