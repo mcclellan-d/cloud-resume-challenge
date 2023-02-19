@@ -7,7 +7,7 @@ data "cloudflare_zone" "this" {
 resource "cloudflare_record" "web" {
   zone_id = data.cloudflare_zone.this.id
   name    = var.subdomain
-  value   = var.aws_cloudfront_endpoint
+  value   = var.cloudfront_domain_name
   type    = "CNAME"
   ttl     = 3600
 }

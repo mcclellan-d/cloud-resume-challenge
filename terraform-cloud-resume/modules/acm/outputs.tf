@@ -10,3 +10,8 @@ output "tls_certificate_domain_validation_options" {
   description = "AWS ACM TLS certificate option to use to validate domain"
   value = aws_acm_certificate.tls_certificate.domain_validation_options
 }
+
+output "tlscert_arn" {
+  description = "The arn of the TLS certificate"
+  value = aws_acm_certificate.tls_certificate.arn
+}

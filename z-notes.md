@@ -27,4 +27,9 @@ Check cantrill course covering the section... 90% certain there's a lab associat
 - /env/ folder with dev and prod .tfvars and .tfbackend (probably won't implement until after everything works)
 
 - REL to S3 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
-- 
+
+
+
+
+# OAC bucket policy works...
+- Need to figure out how to properly add the policy or if this is generated somehow.
