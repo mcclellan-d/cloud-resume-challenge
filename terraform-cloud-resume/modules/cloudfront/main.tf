@@ -1,8 +1,5 @@
 # --- CloudFront/main.tf
 
-# make sure to have price class set to only use NA and EU
-# probably add CNAME
-
 # OAC is newer and better than OAI
 # https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/
 resource "aws_cloudfront_origin_access_control" "default" {
@@ -13,19 +10,6 @@ resource "aws_cloudfront_origin_access_control" "default" {
   signing_protocol                  = "sigv4"
 }
 
-# directly from documentation
-resource "aws_s3_bucket" "web_bucket" {
-  bucket = var.bucket_name
-
-  tags = var.common_tags
-}
-
-# ACLs are depracated... probably don't need this
-resource "aws_s3_bucket_acl" "b_acl" {
-  bucket = aws_s3_bucket.web_bucket.id
-  acl    = "private"
-}
-
 # # Documentation had this for some reason... required field but not sure why it's just a string
 # locals {
 #   s3_origin_id = "myS3Origin"
@@ -33,9 +17,9 @@ resource "aws_s3_bucket_acl" "b_acl" {
 
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
-    domain_name              = aws_s3_bucket.web_bucket.bucket_regional_domain_name
+    domain_name              = var.b_regional_domain_name
     origin_access_control_id = aws_cloudfront_origin_access_control.default.id
-    origin_id                = aws_s3_bucket.web_bucket.bucket_regional_domain_name
+    origin_id                = var.b_regional_domain_name
   }
 
   enabled             = true
@@ -55,7 +39,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = aws_s3_bucket.web_bucket.bucket_regional_domain_name
+    target_origin_id = var.b_regional_domain_name
 
     forwarded_values {
       query_string = false

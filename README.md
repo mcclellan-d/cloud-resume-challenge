@@ -12,7 +12,7 @@ To do list
 - [x] DNS w/ Cloudflare
 - [x] ACM Certificates
 - [x] CloudFront Distribution
-- [ ] S3 Bucket Configurations
+- [x] S3 Bucket Configurations
 - [ ] API Gateway
 - [ ] Lambda (Python)
 - [ ] DynamoDB

@@ -1,6 +1,6 @@
 # --- S3/outputs.tf
 
-output "s3_bucket" {
-  value = aws_s3_bucket.web_bucket.arn
+output "b_regional_domain_name" {
+  value = aws_s3_bucket.web_bucket.bucket_regional_domain_name
 }
 
