@@ -28,4 +28,4 @@ Tasks were split into separate modules by service... Some of these should have b
 
 The end state should look similar to this.
 # Logical Map
-![](logical_map_1.png)
+![](logical_map_2.png)
