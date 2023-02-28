@@ -1,8 +1,8 @@
 # --- dynamodb/main.tf
 
-resource "aws_dynamodb_table" "example" {
-  name             = "visitor_counter"
-  hash_key         = "TestTableHashKey"
+resource "aws_dynamodb_table" "countDBtable" {
+  name             = "visit-count-table"
+  hash_key         = "ID"
   billing_mode     = "PAY_PER_REQUEST"
   
   # provisioned mode is a part of free tier... might need to look at that
@@ -13,7 +13,7 @@ resource "aws_dynamodb_table" "example" {
   #stream_view_type = "NEW_AND_OLD_IMAGES"
 
   attribute {
-    name = "TestTableHashKey"
+    name = "ID"
     type = "S"
   }
 

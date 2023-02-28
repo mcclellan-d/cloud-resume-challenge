@@ -8,6 +8,12 @@ module "acm" {
   common_tags = var.common_tags
 }
 
+module "apigateway" {
+  source = "./modules/apigateway"
+  common_tags = var.common_tags
+  lambda_invoke_arns = module.lambda.lambda_invoke_arns
+  }
+
 module "cloudflare" {
   source = "./modules/cloudflare"
   subdomain = var.subdomain
@@ -19,12 +25,23 @@ module "cloudflare" {
 
 module "cloudfront" {
   source = "./modules/cloudfront"
-  bucket_name = var.bucket_name
   b_regional_domain_name = module.s3.b_regional_domain_name
   subdomain = var.subdomain
   domain = var.domain
   common_tags = var.common_tags
   tlscert_arn = module.acm.tlscert_arn
+}
+
+module "dynamodb" {
+  source = "./modules/dynamodb"
+  common_tags = var.common_tags
+}
+
+module "lambda" {
+  source = "./modules/lambda"
+  common_tags = var.common_tags
+  b_web_bucket_id =  module.s3.b_web_bucket_id
+  countDBtable_arn = module.dynamodb.countDBtable_arn
 }
 
 module "s3" {

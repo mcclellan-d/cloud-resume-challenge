@@ -13,9 +13,10 @@ To do list
 - [x] ACM Certificates
 - [x] CloudFront Distribution
 - [x] S3 Bucket Configurations
-- [ ] API Gateway
-- [ ] Lambda (Python)
-- [ ] DynamoDB
+- [x] API Gateway
+- [x] Lambda (Python)
+- [x] DynamoDB
+- [ ] Swap to static site generator
 - [ ] S3 Terraform State backend
 - [ ] CI/CD (Github Actions)
 - [ ] Blog post

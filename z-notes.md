@@ -1,22 +1,8 @@
-# Challenge
-
-The proposed challenge:
-https://cloudresumechallenge.dev/docs/the-challenge/aws/
-
-The have a guide specifically for [Terraform](https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/).
-
-#
-Site ideas
+# Site ideas
 Rather than what the guide recommends for HTML, CSS, and Javascript... We should consider Jekyll.
+Should consider looking at Hugo as well.
 
 It will look prettier and will be easier to define.
-
-
-# CloudFront
-Since we'll likely use cloudfront... we probably don't need to give direct access to our bucket.
-Check cantrill course covering the section... 90% certain there's a lab associated
-
-- Update: Yes, we can use ACM and CloudFront without route53
 
 # Issues and considerations
 
@@ -28,8 +14,7 @@ Check cantrill course covering the section... 90% certain there's a lab associat
 
 - REL to S3 https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
 
-
-
-
-# OAC bucket policy works...
-- Need to figure out how to properly add the policy or if this is generated somehow.
+- Debating on fixing hardcoded values... python and javascript will have these.
+- Hardcoded javascript less of an issue, we can have website content separate anyways.
+- Could change API Gateway to only allow invocation with specified domain.
+- add proper logging and error handling to lambda
