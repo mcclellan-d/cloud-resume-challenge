@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K3s on Davaun McClellan</title>
+    <link>/tags/k3s/</link>
+    <description>Recent content in K3s on Davaun McClellan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Oct 2022 12:41:05 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/k3s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Homelab</title>
+      <link>/projects/creations/homelab-project/</link>
+      <pubDate>Tue, 11 Oct 2022 12:41:05 -0500</pubDate>
+      
+      <guid>/projects/creations/homelab-project/</guid>
+      <description>Home lab •Virtualization and containerization lab running Proxmox, Docker, and Kubernetes. Services originally hosted on virtual machines were converted to containers on docker, and recently swapped to Kubernetes. •Setup web proxy on Kubernetes cluster to redirect traffic and add proper TLS certificates from &amp;lsquo;Lets Encrypt&amp;rsquo; to all web applications.</description>
+    </item>
+    
+  </channel>
+</rss>

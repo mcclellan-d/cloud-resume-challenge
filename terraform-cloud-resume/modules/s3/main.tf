@@ -1,6 +1,7 @@
 # --- S3/main.tf
 
 # this is for 'content_type' which we probably don't need
+# this breaks things if you don't have all the mime types
 locals {
   mime_types = {
     htm  = "text/html"
@@ -12,6 +13,8 @@ locals {
     json = "application/json"
     png  = "image/png"
     md = "text/markdown"
+    xml = "text/xml"
+    ico = "image/x-icon"
   }
 }
 

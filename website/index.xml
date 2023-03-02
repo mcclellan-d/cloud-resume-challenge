@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Davaun McClellan</title>
+    <link>/</link>
+    <description>Recent content in Home on Davaun McClellan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Feb 2018 18:56:13 -0500</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Atlassian Deployment Triggers</title>
+      <link>/projects/contributions/deploy-triggers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/contributions/deploy-triggers/</guid>
+      <description>Addressed pretty significant page load performance issue founde in larger deployments. Eliminates uses of intensive backend query, replacing it with an asynchronous API call against a lucene index. This change reduces page load from from 2+ minutes to nearly instant, with an incredibly responsive UI.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/publications/sample/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publications/sample/</guid>
+      <description>This is a post on publications</description>
+    </item>
+    
+    <item>
+      <title>Personal Website</title>
+      <link>/projects/creations/website-blog/</link>
+      <pubDate>Sun, 11 Dec 2022 12:41:05 -0500</pubDate>
+      
+      <guid>/projects/creations/website-blog/</guid>
+      <description>Personal Website (not the this one) Utilized this project to get familiarized with Visual Studio Code, Git, and to document some of the projects/courses I&amp;rsquo;ve completed. Deployed static website utilizing GitHub Pages, CI/CD, and static site generator (Jekyll).
+link: https://mcclellan.cloud/
+Migrating soon once domain transfer completes.</description>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>/projects/creations/homelab-project/</link>
+      <pubDate>Tue, 11 Oct 2022 12:41:05 -0500</pubDate>
+      
+      <guid>/projects/creations/homelab-project/</guid>
+      <description>Home lab •Virtualization and containerization lab running Proxmox, Docker, and Kubernetes. Services originally hosted on virtual machines were converted to containers on docker, and recently swapped to Kubernetes. •Setup web proxy on Kubernetes cluster to redirect traffic and add proper TLS certificates from &amp;lsquo;Lets Encrypt&amp;rsquo; to all web applications.</description>
+    </item>
+    
+    <item>
+      <title>Forcing Visits to use SSL</title>
+      <link>/blog/force-ssl/</link>
+      <pubDate>Thu, 01 Jan 2009 14:09:10 +0000</pubDate>
+      
+      <guid>/blog/force-ssl/</guid>
+      <description>Intro Doesn&amp;rsquo;t matter whether it&amp;rsquo;s a CakePHP app for a client, your own personal CMS, or any other web based application. If your passing around passwords or other sensitive info you should really implement SSL. SSL provides 2 main perks to your visitors.
+ First it encrypts all communication that flies across the web. This prevents curious or devious billies from getting your secrets. Secondly it ensures to the user that your server is in fact who it claims, and not a nasty &amp;lsquo;man in the middle&amp;rdquo; attack.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml
+[outputs] home = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;] Searching additional fileds To search additional fields defined in front matter, you must add it in 2 places.</description>
+    </item>
+    
+  </channel>
+</rss>

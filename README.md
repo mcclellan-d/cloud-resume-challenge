@@ -7,6 +7,9 @@ https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
 They have a guide specifically for [Terraform](https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/).
 
+Current website link is https://test.0x00.link
+
+I'm in the process of transferring 'mcclellan.cloud' domain to Cloudflare.
 
 To do list
 - [x] DNS w/ Cloudflare
@@ -16,11 +19,14 @@ To do list
 - [x] API Gateway
 - [x] Lambda (Python)
 - [x] DynamoDB
-- [ ] Swap to static site generator
+- [x] Swap to static site generator
 - [ ] S3 Terraform State backend
 - [ ] CI/CD (Github Actions)
 - [ ] Blog post
 
+Optional Post objectives
+- [ ] Separate frontend from backend repo
+- [ ] Find more reliable Hugo Theme
 
 
 Might not include Route53 as the domain is managed on cloudflare.

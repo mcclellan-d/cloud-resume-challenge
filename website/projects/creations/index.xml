@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Creations on Davaun McClellan</title>
+    <link>/projects/creations/</link>
+    <description>Recent content in Creations on Davaun McClellan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2020 15:00:28 +0000</lastBuildDate>
+    
+	<atom:link href="/projects/creations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Personal Website</title>
+      <link>/projects/creations/website-blog/</link>
+      <pubDate>Sun, 11 Dec 2022 12:41:05 -0500</pubDate>
+      
+      <guid>/projects/creations/website-blog/</guid>
+      <description>Personal Website (not the this one) Utilized this project to get familiarized with Visual Studio Code, Git, and to document some of the projects/courses I&amp;rsquo;ve completed. Deployed static website utilizing GitHub Pages, CI/CD, and static site generator (Jekyll).
+link: https://mcclellan.cloud/
+Migrating soon once domain transfer completes.</description>
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>/projects/creations/homelab-project/</link>
+      <pubDate>Tue, 11 Oct 2022 12:41:05 -0500</pubDate>
+      
+      <guid>/projects/creations/homelab-project/</guid>
+      <description>Home lab •Virtualization and containerization lab running Proxmox, Docker, and Kubernetes. Services originally hosted on virtual machines were converted to containers on docker, and recently swapped to Kubernetes. •Setup web proxy on Kubernetes cluster to redirect traffic and add proper TLS certificates from &amp;lsquo;Lets Encrypt&amp;rsquo; to all web applications.</description>
+    </item>
+    
+  </channel>
+</rss>
