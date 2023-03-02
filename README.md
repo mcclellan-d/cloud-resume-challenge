@@ -5,8 +5,8 @@
 The proposed challenge:
 https://cloudresumechallenge.dev/docs/the-challenge/aws/
 
-I've decided to use Hugo rather than write my whole website in html and css.
-Currently trying out a few themes, this will like change in the near future.
+I've decided to use Hugo rather than write my whole website in html and css.\
+Currently testing out [hugo-resume theme](https://themes.gohugo.io/themes/hugo-resume/), this still needs a few tweaks but it's good enough for now.
 
 They have a guide specifically for [Terraform](https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/).
 
