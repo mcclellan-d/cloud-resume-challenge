@@ -2,13 +2,13 @@
 
 variable "subdomain" {
   type    = string
-  default = "test"
+  default = "resume"
   description = "Just the subdomain portion of FQDN"
 }
 
 variable "domain" {
   type    = string
-  default = "0x00.link"
+  default = "mcclellan.cloud"
   description = "Just the domain portion of the FQDN"
 }
 
