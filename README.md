@@ -10,10 +10,6 @@ Currently testing out [hugo-resume theme](https://themes.gohugo.io/themes/hugo-r
 
 They have a guide specifically for [Terraform](https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/).
 
-Current website link is https://test.0x00.link
-
-I'm in the process of transferring 'mcclellan.cloud' domain to Cloudflare.
-
 To do list
 - [x] DNS w/ Cloudflare
 - [x] ACM Certificates
@@ -31,9 +27,4 @@ To do list
 Optional Post objectives
 
 - [ ] Find more reliable Hugo Theme
-
-
-Might not include Route53 as the domain is managed on cloudflare.
-
-Tasks were split into separate modules by service... Some of these should have been consolidated. 
 
