@@ -2,21 +2,21 @@
 
 # this is for 'content_type' which we probably don't need
 # this breaks things if you don't have all the mime types
-locals {
-  mime_types = {
-    htm  = "text/html"
-    html = "text/html"
-    css  = "text/css"
-    ttf  = "font/ttf"
-    js   = "application/javascript"
-    map  = "application/javascript"
-    json = "application/json"
-    png  = "image/png"
-    md = "text/markdown"
-    xml = "text/xml"
-    ico = "image/x-icon"
-  }
-}
+# locals {
+#   mime_types = {
+#     htm  = "text/html"
+#     html = "text/html"
+#     css  = "text/css"
+#     ttf  = "font/ttf"
+#     js   = "application/javascript"
+#     map  = "application/javascript"
+#     json = "application/json"
+#     png  = "image/png"
+#     md = "text/markdown"
+#     xml = "text/xml"
+#     ico = "image/x-icon"
+#   }
+# }
 
 # S3 bucket for web
 resource "aws_s3_bucket" "web_bucket" {
@@ -57,14 +57,14 @@ data "aws_iam_policy_document" "s3_b_policy" {
 
 # Upload latest resume to s3 bucket
 # might separate web into different repo
-resource "aws_s3_object" "upload_static_web_files" {
-  for_each = fileset("${path.module}/../../../website/","**")
-  bucket = aws_s3_bucket.web_bucket.id
-  key = each.value
-  source = "${path.module}/../../../website/${each.value}"
-  etag = filemd5("${path.module}/../../../website/${each.value}")
-  content_type = lookup(local.mime_types, split(".", each.value)[length(split(".", each.value)) - 1])
-}
+# resource "aws_s3_object" "upload_static_web_files" {
+#   for_each = fileset("${path.module}/../../../website/","**")
+#   bucket = aws_s3_bucket.web_bucket.id
+#   key = each.value
+#   source = "${path.module}/../../../website/${each.value}"
+#   etag = filemd5("${path.module}/../../../website/${each.value}")
+#   content_type = lookup(local.mime_types, split(".", each.value)[length(split(".", each.value)) - 1])
+# }
 
 
 resource "aws_s3_bucket_public_access_block" "block" {

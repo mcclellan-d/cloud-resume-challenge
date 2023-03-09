@@ -23,12 +23,13 @@ To do list
 - [x] Lambda (Python)
 - [x] DynamoDB
 - [x] Swap to static site generator
-- [ ] S3 Terraform State backend
+- [X] S3 Terraform State backend
+- [ ] Separate frontend from backend repo
 - [ ] CI/CD (Github Actions)
 - [ ] Blog post
 
 Optional Post objectives
-- [ ] Separate frontend from backend repo
+
 - [ ] Find more reliable Hugo Theme
 
 
