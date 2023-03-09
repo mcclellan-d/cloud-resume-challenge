@@ -1,5 +1,5 @@
-# Work In Progress!
-
+# Logical Map
+![](logical_map_2.png)
 # Challenge
 
 The proposed challenge:
@@ -36,6 +36,3 @@ Might not include Route53 as the domain is managed on cloudflare.
 
 Tasks were split into separate modules by service... Some of these should have been consolidated. 
 
-The end state should look similar to this.
-# Logical Map
-![](logical_map_2.png)
