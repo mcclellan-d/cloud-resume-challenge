@@ -40,7 +40,8 @@ module "dynamodb" {
 module "lambda" {
   source = "./modules/lambda"
   common_tags = var.common_tags
-  b_web_bucket_id =  module.s3.b_web_bucket_id
+  #b_web_bucket_id =  module.s3.b_web_bucket_id
+  lambda_bucket = var.lambda_bucket_name
   countDBtable_arn = module.dynamodb.countDBtable_arn
 }
 

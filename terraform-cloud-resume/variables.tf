@@ -25,6 +25,12 @@ variable "terraform_bucket_name" {
   description = "Bucket to keep terraform state"
 }
 
+variable "lambda_bucket_name" {
+  type = string
+  default = "mcclellan-lambda-bucket"
+  description = "Bucket to keep lambda code"
+}
+
 variable "common_tags" {
   type = map(string)
   description = "The common tag to apply to all components"

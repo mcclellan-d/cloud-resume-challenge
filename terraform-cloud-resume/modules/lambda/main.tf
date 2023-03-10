@@ -9,7 +9,7 @@ data "archive_file" "visitorCountFile" {
 
 # Upload the archive to S3.
 resource "aws_s3_object" "function_upload" {
-  bucket = var.b_web_bucket_id
+  bucket = var.lambda_bucket
   key = "visitorCount.zip"
   source = data.archive_file.visitorCountFile.output_path
   etag  = data.archive_file.visitorCountFile.output_md5
@@ -17,7 +17,7 @@ resource "aws_s3_object" "function_upload" {
 
 # create lambda function
 resource "aws_lambda_function" "visitorCountFunction" {
-  s3_bucket = var.b_web_bucket_id
+  s3_bucket = var.lambda_bucket
   s3_key = aws_s3_object.function_upload.key
   #filename      = "visitorCount.zip"
   function_name = "VisitCountFunction"
