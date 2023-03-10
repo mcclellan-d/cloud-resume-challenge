@@ -20,11 +20,12 @@ To do list
 - [x] DynamoDB
 - [x] Swap to static site generator
 - [X] S3 Terraform State backend
-- [ ] Separate frontend from backend repo
+- [X] Separate frontend from backend repo
+- Waiting for GitHub OIDC provider implemenation
 - [ ] CI/CD (Github Actions)
 - [ ] Blog post
 
 Optional Post objectives
-
+- [ ] Implement GitHub as OIDC provider for assuming role
 - [ ] Find more reliable Hugo Theme
 
