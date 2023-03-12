@@ -10,6 +10,8 @@ Currently testing out [hugo-resume theme](https://themes.gohugo.io/themes/hugo-r
 
 They have a guide specifically for [Terraform](https://cloudresumechallenge.dev/docs/extensions/terraform-getting-started/).
 
+Frontend Repo: https://github.com/mcclellan-d/cloud-resume-frontend
+
 To do list
 - [x] DNS w/ Cloudflare
 - [x] ACM Certificates
