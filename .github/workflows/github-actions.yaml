@@ -1,0 +1,54 @@
+name: cloud-resume-challenge frontend
+run-name: ${{ github.actor }} is testing GitHub actions.
+
+on:
+  push:
+    branches:
+    - main
+    - master
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+
+jobs:
+  deploy:
+    name: Terraform
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      tf_actions_working_dir: ./terraform-cloud-resume
+    # Permissions needed to interact with GitHub OIDC Token endpoint
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    # AWS OIDC
+    - name: Configure AWS credentials from Production account
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: ${{ secrets.ROLE_ARN }}
+        aws-region: ${{ vars.AWS_REGION }}
+    # Terraform
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2    
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt -check
+      continue-on-error: true
+
+    - name: Terraform Init
+      id: init
+      run: terraform init
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
+      continue-on-error: true
