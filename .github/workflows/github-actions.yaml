@@ -19,6 +19,10 @@ jobs:
     environment: production
     env:
       tf_actions_working_dir: ./terraform-cloud-resume
+    defaults:
+      run:
+        shell: bash
+        working-directory: ${{ env.tf_actions_working_dir }}
     # Permissions needed to interact with GitHub OIDC Token endpoint
     permissions:
       id-token: write
