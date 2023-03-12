@@ -19,6 +19,7 @@ jobs:
     environment: production
     env:
       tf_actions_working_dir: ./terraform-cloud-resume
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     defaults:
       run:
         shell: bash

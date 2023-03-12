@@ -35,7 +35,7 @@ variable "common_tags" {
   type = map(string)
   description = "The common tag to apply to all components"
   default = {
-    Environment = "dev",
+    Environment = "prod",
     Project = "cloud-resume-challenge"
 }
 }
