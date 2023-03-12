@@ -1,4 +1,4 @@
-name: cloud-resume-challenge frontend
+name: cloud-resume-challenge backend
 run-name: ${{ github.actor }} is testing GitHub actions.
 
 on:
