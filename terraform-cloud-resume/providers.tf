@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "mcclellan-terraform-backend"
-    key = "terraform.tfstate"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
   required_providers {
