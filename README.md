@@ -21,11 +21,11 @@ To do list
 - [x] Swap to static site generator
 - [X] S3 Terraform State backend
 - [X] Separate frontend from backend repo
-- Waiting for GitHub OIDC provider implemenation
-- [ ] CI/CD (Github Actions)
+- [X] OpenID Connect (OIDC)
+- [X] CI/CD (Github Actions)
 - [ ] Blog post
 
 Optional Post objectives
-- [ ] Implement GitHub as OIDC provider for assuming role
+- [X] Implement GitHub as OIDC provider for assuming role
 - [ ] Find more reliable Hugo Theme
 
