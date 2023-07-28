@@ -39,7 +39,7 @@ jobs:
         aws-region: ${{ vars.AWS_REGION }}
     # Terraform
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@master    
+      uses: hashicorp/setup-terraform@main    
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -check
