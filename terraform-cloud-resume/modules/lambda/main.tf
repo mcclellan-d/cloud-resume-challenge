@@ -26,7 +26,7 @@ resource "aws_lambda_function" "visitorCountFunction" {
 
   source_code_hash = filebase64sha256(data.archive_file.visitorCountFile.output_path)
 
-  runtime = "python3.10"
+  runtime = "python3.11"
 
   environment {
     variables = {
